@@ -4,7 +4,7 @@ RDRPOSTagger is adaptable for Tibetan texts which are already segmented because 
 RDRPOSTagger requires an inital tagger. For that we need a text where each line is a sequence of WORD/TAG pairs.
 See sample training and test sets in the data directory.
 
-We train RDRPOSTagger on goldTibTest.txt with the commend : pSCRDRtagger$ python RDRPOSTagger.py train ../data/goldTibTest.txt
+We train RDRPOSTagger on goldTibTest.txt with the command : pSCRDRtagger$ python RDRPOSTagger.py train ../data/goldTibTest.txt
 Here pSCRDRtagger$ is simply used to denote the current pSCRDRtagger source package. Note : the text should be already segmented.
 A .DICT lexicon file and an .RDR trained model file will be generated in the same directory containing the gold standard training corpus.
 
@@ -17,6 +17,8 @@ The training text goldTibTest.txt is a syllable part-of-speech tagged corpus of 
 Modifications made to the original vertical format text : 
 1) with simple ctrl+F click, we transformed WORD tag - sequence into WORD/TAG sequence.
 2) deleted all the repetitions of the WORD/TAG sequences.
+
+For further information on RDRPOSTagger : http://rdrpostagger.sourceforge.net/
 
 
 
