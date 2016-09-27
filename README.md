@@ -17,6 +17,7 @@ The training text goldTibTest.txt is a syllable part-of-speech tagged corpus of 
 Modifications made to the original vertical format text : 
 1) with simple ctrl+F click, we transformed WORD tag - sequence into WORD/TAG sequence.
 2) deleted all the repetitions of the WORD/TAG sequences.
+3) completed the missing tags with simple tags like n for any kind of nouns except for proper nouns. 
 
 For further information on RDRPOSTagger : http://rdrpostagger.sourceforge.net/
 
