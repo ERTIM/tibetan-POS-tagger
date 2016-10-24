@@ -1,10 +1,12 @@
 # tibetan-POS-tagger
 RDRPOSTagger for Tibetan
-RDRPOSTagger is adaptable for Tibetan texts which are already segmented because the RDRPOSTagger segments texts with words seperated by white space characters which is not the case for Tibetan texts.
+
+tibetan-POS-tagger is a POS Tagger based on RDRPOSTagger. It has been trained for Tibetan language by Tashi Kyi from ERTIM (Inalco) using a training corpus (http://larkpie.net/tibetancorpus/). The latter has been enhanced with proper noun lists, the duplicates have been removed and the missing tags have been added in order to get better results. The enhanced version of the corpus is available on GitHub.
+
 RDRPOSTagger requires an inital tagger. For that we need a text where each line is a sequence of WORD/TAG pairs.
 See sample training and test sets in the data directory.
 
-We train RDRPOSTagger on goldTibTest.txt with the command : pSCRDRtagger$ python RDRPOSTagger.py train ../data/goldTibTest.txt
+We trained RDRPOSTagger on goldTibTest.txt with the command : pSCRDRtagger$ python RDRPOSTagger.py train ../data/goldTibTest.txt
 Here pSCRDRtagger$ is simply used to denote the current pSCRDRtagger source package. Note : the text should be already segmented.
 A .DICT lexicon file and an .RDR trained model file will be generated in the same directory containing the gold standard training corpus.
 
