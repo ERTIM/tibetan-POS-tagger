@@ -1,16 +1,16 @@
 # tibetan-POS-tagger
 RDRPOSTagger for Tibetan
 
-tibetan-POS-tagger is a POS Tagger based on RDRPOSTagger. It has been trained for Tibetan language by Tashi Kyi from ERTIM (Inalco) using a training corpus (http://larkpie.net/tibetancorpus/). The latter has been enhanced with proper noun lists, the duplicates have been removed and the missing tags have been added in order to get better results. The enhanced version of the corpus is available on GitHub.
+tibetan-POS-tagger is a POS Tagger based on RDRPOSTagger(http://rdrpostagger.sourceforge.net/). It has been trained for Tibetan language by Tashi Kyi from ERTIM (Inalco) using a training corpus (http://larkpie.net/tibetancorpus/). The latter has been enhanced with proper noun lists, the duplicates have been removed and the missing tags have been added in order to get better results. The enhanced version of the corpus is available on GitHub.
 
-RDRPOSTagger requires an inital tagger. For that we need a text where each line is a sequence of WORD/TAG pairs.
+In order to train RDRPOSTagger we need a text where each line is a sequence of WORD/TAG pairs.
 See sample training and test sets in the data directory.
 
 We trained RDRPOSTagger on goldTibTest.txt with the command : pSCRDRtagger$ python RDRPOSTagger.py train ../data/goldTibTest.txt
 Here pSCRDRtagger$ is simply used to denote the current pSCRDRtagger source package. Note : the text should be already segmented.
 A .DICT lexicon file and an .RDR trained model file will be generated in the same directory containing the gold standard training corpus.
 
-To employ the trained model for POS tagging on a raw unlabeled text corpus : pSCRDRtagger$ python RDRPOSTagger.py tag PATH-TO-TRAINED-MODEL PATH-TO-LEXICON PATH-TO-RAW-TEXT-CORPUS
+To use the trained model for POS tagging on a raw unlabeled text corpus : pSCRDRtagger$ python RDRPOSTagger.py tag PATH-TO-TRAINED-MODEL PATH-TO-LEXICON PATH-TO-RAW-TEXT-CORPUS
 Exemple : pSCRDRtagger$ python RDRPOSTagger.py tag ../data/goldTibTest.txt.RDR ../data/goldTibTest.txt.DICT ../data/rawTest
 A .TAGGED file, in this case rawTest.TAGGED, will be generated in the same directory containing the raw text corpus.
 
